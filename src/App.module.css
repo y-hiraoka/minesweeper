@@ -1,0 +1,142 @@
+.page {
+  margin-top: 24px;
+}
+
+.settings {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 8px;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  margin: auto;
+  margin-bottom: 48px;
+  padding-bottom: 8px;
+  width: fit-content;
+}
+
+.settingsLabel {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.settingsInput {
+  font-size: 14px;
+  padding: 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 80px;
+}
+
+.settingsInput:focus-visible {
+  outline: 1px solid rgb(164, 140, 7);
+  outline-offset: 1px;
+}
+
+.settingsHelperText {
+  font-size: 12px;
+  color: #666;
+}
+
+.minesweeperRoot {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.matrixContainer {
+  overflow-x: auto;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.matrix {
+  padding: 0px 4px;
+  width: fit-content;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  width: max-content;
+}
+
+.cell {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+}
+
+.cell[data-revealed="true"] {
+  background-color: #eee;
+}
+
+.cell[data-revealed="true"]:focus-visible {
+  outline: 1px solid rgb(164, 140, 7);
+  outline-offset: -4px;
+}
+
+.cell[data-revealed="false"] {
+  background-color: #a0a0a0;
+}
+
+.cell[data-revealed="false"]:focus-visible {
+  outline: none;
+  background-color: #747171;
+}
+
+.cell[data-last-revealed="true"] {
+  background-color: rgba(198, 12, 12, 0.51);
+}
+
+.controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.controlsRestMinesCount,
+.controlsPlayTime {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.controlsResetGame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.controlsResetGame:active {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+  background-color: #ddd;
+}
+
+.controlsResetGame:hover {
+  background-color: #eee;
+}
+
+.controlsResetGame:focus-visible {
+  outline: 1px solid rgb(164, 140, 7);
+  outline-offset: 1px;
+}
